@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web-Vault</title>
+<meta name="description" content="Fast, phone-friendly websites for any business. We build it, host it and keep it updated.">
+<meta name="theme-color" content="#07050f">
+<!-- WhatsApp link preview. og:image must be a full https:// link to og.jpg once your site is live. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Web-Vault">
+<meta property="og:description" content="Fast, phone-friendly websites for any business. We build it, host it and keep it updated.">
+<meta property="og:image" content="https://YOUR-SITE-LINK/og.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzA3MDUwZiIvPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjExIiBmaWxsPSJub25lIiBzdHJva2U9IiMzZGZmYjAiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjQuNSIgZmlsbD0iI2EzNWNmZiIvPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjEuNiIgZmlsbD0iIzNkZmZiMCIvPgo8L3N2Zz4K">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{--color-void: #07050f; --color-panel: #100b1f; --color-line: #2b2050; --color-mint: #3dffb0; --color-violet: #a35cff; --color-pink: #ff3fd8; --color-text: #ebe8f8; --color-dim: #d9d4f2; --color-mint-ink: #04140d; --color-violet-ink: #0d0620; --color-background: #07050f; --color-foreground: #ebe8f8; --color-card: #100b1f; --color-border: #2b2050; --color-primary: #3dffb0; --color-primary-foreground: #04140d; --color-muted-foreground: #d9d4f2; --color-ring: #3dffb0; --font-display: "Unbounded", "Trebuchet MS", sans-serif; --font-sans: "Manrope", "Segoe UI", Arial, sans-serif; --radius-sm: 0.5rem; --radius-md: 0.75rem; --radius-lg: 1rem; --radius-xl: 1.2rem; --shadow-mint: 0 0 22px rgba(61, 255, 176, 0.45); --shadow-mint-lg: 0 0 34px rgba(61, 255, 176, 0.75); --shadow-violet: 0 0 34px rgba(163, 92, 255, 0.32); --shadow-pink: 0 0 50px rgba(255, 63, 216, 0.15);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;border:0 solid}
+html{line-height:1.5;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:none}
+ol,ul{list-style:none}
+b,strong{font-weight:700}
+hr{height:0;color:inherit;border-top-width:1px}
+svg{display:block;vertical-align:middle}
+button{font:inherit;color:inherit;background:transparent;border-radius:0;cursor:pointer}
+button:disabled{cursor:default}
+
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background:
+      radial-gradient(60rem 40rem at 85% -10%, rgba(163, 92, 255, 0.28), transparent 60%),
+      radial-gradient(50rem 36rem at -10% 30%, rgba(61, 255, 176, 0.14), transparent 60%),
+      radial-gradient(45rem 30rem at 100% 90%, rgba(255, 63, 216, 0.16), transparent 60%),
+      radial-gradient(55rem 40rem at 50% 55%, rgba(56, 120, 255, 0.16), transparent 65%),
+      var(--color-void);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    font-weight: 700;
+    text-wrap: balance;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-mint);
+    outline-offset: 3px;
+  }
+.wrap {
+  max-width: 68rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;padding-right: 1.25rem;
+}
+
+.site-section {
+  padding-top: 4.5rem;padding-bottom: 4.5rem;
+  scroll-margin-top: 1rem;
+}
+
+.lead {
+  color: var(--color-dim);
+  max-width: 38rem;
+  margin-bottom: 2rem;
+}
+
+.brand-mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+  background: linear-gradient(90deg, var(--color-mint), var(--color-violet) 60%, var(--color-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 7vw, 3.6rem);
+  margin-bottom: 1.1rem;
+  background: linear-gradient(100deg, #fff 0%, var(--color-mint) 45%, var(--color-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.doodles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.doodles svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.vault-mark svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 22px rgba(163, 92, 255, 0.55));
+}
+
+.spin {
+  transform-origin: 200px 200px;
+  animation: spin 40s linear infinite;
+}
+
+.spin.rev {
+  animation-duration: 26s;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.plan-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-top: 1.9rem;padding-bottom: 0.35rem;
+  padding-left: max(0.35rem, calc((100% - min(21.25rem, 84%)) / 2));padding-right: max(0.35rem, calc((100% - min(21.25rem, 84%)) / 2));
+  cursor: grab;
+}
+
+.plan-track:active {
+  cursor: grabbing;
+}
+
+.plan-track::-webkit-scrollbar {
+  display: none;
+}
+
+.plan-slide {
+  flex: 0 0 min(21.25rem, 84%);
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+@media (min-width: 720px) {
+  .plan-track {
+    padding-left: 0.15rem;padding-right: 0.15rem;
+  }
+
+  .plan-slide {
+    flex-basis: calc((100% - 1rem) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .plan-slide {
+    flex-basis: calc((100% - 2rem) / 3);
+  }
+}
+
+.plan-card {
+  height: 100%;
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 28rem;
+}
+
+.plan-card.tone-mint {
+  border-color: var(--color-mint);
+}
+
+.plan-card.tone-violet {
+  border-color: var(--color-violet);
+  box-shadow: var(--shadow-violet);
+}
+
+.plan-card.tone-pink {
+  border-color: var(--color-pink);
+}
+
+.plan-card .price {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  margin: 0.7rem 0 0.1rem;
+}
+
+.plan-card.tone-mint .price {
+  color: var(--color-mint);
+}
+
+.plan-card.tone-violet .price {
+  color: var(--color-violet);
+}
+
+.plan-card.tone-pink .price {
+  color: var(--color-pink);
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+  font-size: 0.94rem;
+  flex: 1;
+}
+
+.plan-card li {
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.plan-card li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.plan-card.tone-mint li::before {
+  color: var(--color-mint);
+}
+
+.plan-card.tone-violet li::before {
+  color: var(--color-violet);
+}
+
+.plan-card.tone-pink li::before {
+  color: var(--color-pink);
+}
+
+.plan-card hr {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  margin: 1rem 0;
+}
+
+.plan-badge {
+  position: absolute;
+  top: -0.8rem;
+  right: 1.2rem;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 2rem;
+  background: var(--color-violet);
+  color: var(--color-violet-ink);
+}
+
+.plan-badge.mint {
+  background: var(--color-mint);
+  color: var(--color-mint-ink);
+  box-shadow: 0 0 16px rgba(61, 255, 176, 0.5);
+}
+
+.plan-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.1rem;
+}
+
+.plan-dot {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.plan-dot span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--color-line);
+  transition:
+    width 180ms ease,
+    background-color 180ms ease;
+}
+
+.plan-dot[aria-current="true"] span {
+  width: 1.45rem;
+  background: var(--color-mint);
+}
+
+.plan-nav-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
+  background: var(--color-panel);
+  color: var(--color-text);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.plan-nav-btn:hover:not(:disabled) {
+  border-color: var(--color-mint);
+  background: rgba(61, 255, 176, 0.1);
+}
+
+.plan-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.demo-card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.demo-card.main {
+  border-color: var(--color-mint);
+  box-shadow: 0 0 26px rgba(61, 255, 176, 0.16);
+}
+
+.rule {
+  border-left: 3px solid var(--color-violet);
+  background: linear-gradient(90deg, rgba(163, 92, 255, 0.12), transparent);
+  padding: 1rem 1.2rem;
+  border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.rule:nth-child(2) {
+  border-color: var(--color-mint);
+  background: linear-gradient(90deg, rgba(61, 255, 176, 0.1), transparent);
+}
+
+.rule:nth-child(3) {
+  border-color: var(--color-pink);
+  background: linear-gradient(90deg, rgba(255, 63, 216, 0.1), transparent);
+}
+
+.rule:nth-child(4) {
+  border-color: var(--color-violet);
+}
+
+.solve {
+  margin-top: 1.6rem;
+  border: 1px solid var(--color-mint);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  background: rgba(61, 255, 176, 0.06);
+  box-shadow: 0 0 26px rgba(61, 255, 176, 0.14);
+}
+
+.steps {
+  list-style: none;
+  padding: 0;
+  counter-reset: s;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.2rem;
+}
+
+.steps li {
+  counter-increment: s;
+  padding-top: 2.6rem;
+  position: relative;
+  color: var(--color-dim);
+  font-size: 0.95rem;
+}
+
+.steps li::before {
+  content: counter(s);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-mint);
+  color: var(--color-mint);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  box-shadow: 0 0 12px rgba(61, 255, 176, 0.4);
+}
+
+.steps b {
+  display: block;
+  color: var(--color-text);
+  margin-bottom: 0.2rem;
+}
+
+.contact-panel {
+  text-align: center;
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-xl);
+  padding: 3rem 1.5rem;
+  box-shadow: var(--shadow-pink);
+}
+
+.reviews-empty {
+  border: 1px dashed var(--color-violet);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.4rem;
+  text-align: center;
+  color: var(--color-dim);
+}
+
+@media (max-width: 560px) {
+  .nav-hide-sm {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation: none;
+  }
+
+  html,
+  .plan-track {
+    scroll-behavior: auto;
+  }
+}
+
+.block{display:block}
+.flex{display:flex}
+.grid{display:grid}
+.flex-1{flex:1 1 0%}
+.flex-wrap{flex-wrap:wrap}
+.items-center{align-items:center}
+.justify-between{justify-content:space-between}
+.font-display{font-family:var(--font-display)}
+.gap-2{gap:.5rem}
+.gap-3{gap:.75rem}
+.gap-5{gap:1.25rem}
+.gap-8{gap:2rem}
+.gap-\[1\.2rem\]{gap:1.2rem}
+.grid-cols-\[repeat\(auto-fit\,minmax\(15rem\,1fr\)\)\]{grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.grid-cols-\[repeat\(auto-fit\,minmax\(16rem\,1fr\)\)\]{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.hover\:text-mint:hover{color:var(--color-mint)}
+.line-through{text-decoration-line:line-through}
+.m-0{margin:0}
+.mx-auto{margin-left:auto;margin-right:auto}
+.max-w-3xl{max-width:48rem}
+.max-w-60{max-width:15rem}
+.max-w-lg{max-width:32rem}
+.mb-1{margin-bottom:.25rem}
+.mb-1\.5{margin-bottom:.375rem}
+.mb-2{margin-bottom:.5rem}
+.mb-4{margin-bottom:1rem}
+.mb-6{margin-bottom:1.5rem}
+.mb-7{margin-bottom:1.75rem}
+.mt-0\.5{margin-top:.125rem}
+.mt-3{margin-top:.75rem}
+.mt-6{margin-top:1.5rem}
+.no-underline{text-decoration:none}
+.order-1{order:1}
+.order-2{order:2}
+.pb-12{padding-bottom:3rem}
+.pt-8{padding-top:2rem}
+.px-4{padding-left:1rem;padding-right:1rem}
+.py-12{padding-top:3rem;padding-bottom:3rem}
+.py-\[1\.1rem\]{padding-top:1.1rem;padding-bottom:1.1rem}
+.size-5{width:1.25rem;height:1.25rem}
+.text-base{font-size:1rem;line-height:1.5}
+.text-sm{font-size:.875rem;line-height:1.4286}
+.text-center{text-align:center}
+.text-dim{color:var(--color-dim)}
+.text-mint{color:var(--color-mint)}
+.text-text{color:var(--color-text)}
+.text-\[0\.85rem\]{font-size:0.85rem}
+.text-\[0\.92rem\]{font-size:0.92rem}
+.text-\[0\.9rem\]{font-size:0.9rem}
+.text-\[0\.88rem\]{font-size:0.88rem}
+.text-\[1\.08rem\]{font-size:1.08rem}
+.text-\[0\.93rem\]{font-size:0.93rem}
+.text-\[0\.95rem\]{font-size:0.95rem}
+.text-\[1\.05rem\]{font-size:1.05rem}
+.text-\[0\.98rem\]{font-size:0.98rem}
+.text-\[1\.15rem\]{font-size:1.15rem}
+@media (min-width:768px){
+.md\:grid-cols-\[1\.1fr_0\.9fr\]{grid-template-columns:1.1fr .9fr}
+.md\:order-1{order:1}
+.md\:order-2{order:2}
+.md\:max-w-none{max-width:none}
+.md\:py-\[4\.5rem\]{padding-top:4.5rem;padding-bottom:4.5rem}
+}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:2.75rem;padding:.75rem 1.25rem;border-radius:var(--radius-md);font-family:var(--font-sans);font-weight:700;font-size:.95rem;text-decoration:none;transition:box-shadow .15s ease-out,background-color .15s ease-out,transform .15s ease-out}
+.btn:active{transform:scale(.98)}
+.btn-default{border:1px solid transparent;background:var(--color-mint);color:var(--color-mint-ink);box-shadow:0 0 22px rgba(61,255,176,.45)}
+.btn-default:hover{box-shadow:0 0 34px rgba(61,255,176,.75)}
+.btn-ghost{border:1px solid var(--color-violet);color:var(--color-text);box-shadow:inset 0 0 14px rgba(163,92,255,.25)}
+.btn-ghost:hover{background:rgba(163,92,255,.15)}
+.btn-wa{border:1px solid var(--color-mint);color:var(--color-text);box-shadow:inset 0 0 14px rgba(61,255,176,.22)}
+.btn-wa:hover{background:rgba(61,255,176,.15)}
+
+.gift{display:flex;align-items:center;gap:.7rem;margin-top:.9rem;padding:.75rem .9rem;border:1px dashed var(--color-pink);border-radius:var(--radius-md);background:rgba(255,63,216,.08);box-shadow:0 0 18px rgba(255,63,216,.18);font-size:.88rem;color:var(--color-dim)}
+.gift svg{width:1.6rem;height:1.6rem;flex:none;color:var(--color-pink)}
+.gift b{display:block;color:var(--color-text);margin-bottom:.1rem}
+.start-pill{display:inline-block;margin:0 0 1rem;padding:.35rem .9rem;border-radius:999px;border:1px solid rgba(61,255,176,.5);background:rgba(61,255,176,.1);color:var(--color-mint);font-size:.82rem;font-weight:700}
+.launch-note{margin:0 0 1.2rem;padding:.8rem 1rem;max-width:40rem;border-left:3px solid var(--color-pink);border-radius:0 .7rem .7rem 0;background:rgba(255,63,216,.08);font-size:.95rem}
+.vm-clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
+.vm-clamp.vm-open{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible}
+.vm-btn{background:none;border:0;padding:.35rem 0;margin:0;font:inherit;font-weight:700;font-size:.92rem;color:var(--color-mint);text-decoration:underline;cursor:pointer;align-self:flex-start}
+.vm-btn[hidden]{display:none}
+.vm-btn.vm-inline{display:inline;padding:0;margin-left:.45rem;align-self:auto}
+.vm-btn:focus-visible{outline:3px solid var(--color-mint);outline-offset:2px}
+</style>
+</head>
+<body>
+
+      <div class="doodles" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <defs>
+          <linearGradient id="bl" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="560" y2="560">
+            <stop offset="0" stop-color="#38d0ff" />
+            <stop offset=".5" stop-color="#4f7bff" />
+            <stop offset="1" stop-color="#8b6bff" />
+          </linearGradient>
+          <pattern id="tile" width="560" height="560" patternUnits="userSpaceOnUse">
+            <g
+              fill="none"
+              stroke="url(#bl)"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              opacity=".3"
+            >
+              <g transform="translate(30 40) rotate(-6) scale(1.3)">
+                <rect x="10" y="10" width="44" height="30" rx="3" />
+                <path d="M3 46h58l-4 7H7z" />
+              </g>
+              <g transform="translate(240 30) scale(1.1)">
+                <path d="M4 28Q16 12 30 28Q44 12 58 28" />
+              </g>
+              <g transform="translate(430 130) rotate(5) scale(1.3)">
+                <path d="M6 26 12 10H52L58 26Z" />
+                <rect x="10" y="26" width="44" height="28" />
+                <rect x="26" y="36" width="12" height="18" />
+                <path d="M22 10 20 26M32 10V26M42 10 44 26" />
+              </g>
+              <g transform="translate(60 230) rotate(4) scale(1.3)">
+                <path d="M8 8V56H58" />
+                <rect x="16" y="36" width="8" height="20" />
+                <rect x="30" y="26" width="8" height="30" />
+                <rect x="44" y="14" width="8" height="42" />
+              </g>
+              <g transform="translate(270 220) rotate(-8) scale(1.2)">
+                <circle cx="32" cy="32" r="22" />
+                <path d="M32 18V32L42 38" />
+              </g>
+              <g transform="translate(450 330) rotate(10) scale(1.1)">
+                <path d="M32 6A16 16 0 0 1 41 35V43H23V35A16 16 0 0 1 32 6Z" />
+                <path d="M24 50H40M27 56H37" />
+              </g>
+              <g transform="translate(40 410) rotate(-5) scale(1.1)">
+                <rect x="6" y="10" width="52" height="34" rx="8" />
+                <path d="M18 44 14 56 30 44M18 24H46M18 32H36" />
+              </g>
+              <g transform="translate(240 400) scale(1.2)">
+                <circle cx="32" cy="32" r="22" />
+                <ellipse cx="32" cy="32" rx="10" ry="22" />
+                <path d="M10 32H54" />
+              </g>
+              <g transform="translate(440 465) rotate(-4)">
+                <rect x="18" y="4" width="28" height="54" rx="6" />
+                <path d="M27 50H37" />
+              </g>
+              <circle cx="180" cy="150" r="4" />
+              <circle cx="380" cy="440" r="3" />
+              <circle cx="130" cy="520" r="4" />
+              <circle cx="520" cy="250" r="3" />
+            </g>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#tile)" />
+      </svg></div>
+      <div class="wrap">
+        <nav class="flex items-center justify-between py-[1.1rem]">
+          <a class="brand-mark" href="#top">
+            Web-Vault
+          </a>
+          <div class="flex gap-[1.2rem] text-[0.92rem]">
+            <a class="nav-hide-sm text-dim no-underline hover:text-mint" href="#maintenance">
+              Maintenance
+            </a>
+            <a class="nav-hide-sm text-dim no-underline hover:text-mint" href="#reviews">
+              Reviews
+            </a>
+          </div>
+        </nav>
+
+        <header
+          id="top"
+          class="grid items-center gap-8 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-[4.5rem]"
+        >
+          <div class="order-2 md:order-1">
+            <p class="start-pill">New and just getting started</p>
+      <h1 class="hero-title">
+              We build your website.
+              <br>
+              You run your business.
+            </h1>
+            <p class="mb-7 max-w-lg text-[1.08rem] text-dim">
+              Tired of answering the same questions on calls and WhatsApp all day? Your website
+              answers them for you, day and night, and helps more people get to know your business,
+              so you can get back to running it.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a class="btn btn-default" href="#demo">See the demo</a>
+              
+              <a class="btn btn-ghost" href="#plans">View plans and prices</a>
+              
+              <a class="btn btn-wa" href="https://wa.me/2347088278642" target="_blank" rel="noopener noreferrer">
+                  WhatsApp: 0708 827 8642
+                </a>
+              
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="vault-mark mx-auto max-w-60 md:max-w-none" aria-hidden="true"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3dffb0" />
+            <stop offset=".55" stop-color="#a35cff" />
+            <stop offset="1" stop-color="#ff3fd8" />
+          </linearGradient>
+          <radialGradient id="core">
+            <stop offset="0" stop-color="#3dffb0" stop-opacity=".9" />
+            <stop offset="1" stop-color="#a35cff" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <g class="spin">
+          <circle
+            cx="200"
+            cy="200"
+            r="185"
+            fill="none"
+            stroke="url(#g1)"
+            stroke-width="2"
+            stroke-dasharray="6 14"
+          />
+        </g>
+        <g class="spin rev">
+          <circle
+            cx="200"
+            cy="200"
+            r="150"
+            fill="none"
+            stroke="url(#g1)"
+            stroke-width="5"
+            stroke-dasharray="90 30 20 30"
+          />
+        </g>
+        <circle cx="200" cy="200" r="112" fill="#0d0820" stroke="url(#g1)" stroke-width="2" />
+        <g class="spin">
+          <path
+            d="M200 108v34M200 258v34M108 200h34M258 200h34M135 135l24 24M241 241l24 24M265 135l-24 24M159 241l-24 24"
+            stroke="#a35cff"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+        </g>
+        <circle cx="200" cy="200" r="46" fill="url(#core)" />
+        <circle cx="200" cy="200" r="20" fill="none" stroke="#3dffb0" stroke-width="3" />
+        <circle cx="200" cy="200" r="6" fill="#3dffb0" />
+      </svg></div>
+          </div>
+        </header>
+
+        <section id="problem" class="site-section">
+          <h2>Sound familiar?</h2>
+          <p class="lead">If any of these describes your day, this is what we fix.</p>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-5">
+            <div class="rule">
+              <h3 class="mb-1.5 text-[0.98rem]">The same questions, again and again</h3>
+              <p class="text-[0.93rem] text-dim">
+                How much is it? Where are you? Is it available? You answer them all day.
+              </p>
+            </div>
+            <div class="rule">
+              <h3 class="mb-1.5 text-[0.98rem]">Your day disappears</h3>
+              <p class="text-[0.93rem] text-dim">
+                Calls and WhatsApp groups eat the time you need to run your business.
+              </p>
+            </div>
+            <div class="rule">
+              <h3 class="mb-1.5 text-[0.98rem]">You do everything yourself</h3>
+              <p class="text-[0.93rem] text-dim">
+                You are the seller, the assistant and the marketer, with no time left to grow.
+              </p>
+            </div>
+            <div class="rule">
+              <h3 class="mb-1.5 text-[0.98rem]">Tired of explaining your brand</h3>
+              <p class="text-[0.93rem] text-dim">
+                You want more people to know your business without talking about it to everyone, one
+                by one.
+              </p>
+            </div>
+          </div>
+          <div class="solve">
+            <h3 class="mb-2 text-[1.05rem] text-mint">A website that speaks for you</h3>
+            <p class="text-dim">
+              It answers the common questions, shows your business the same clear way to every
+              customer, and helps your brand get known without you repeating yourself. We build it,
+              host it and keep it updated. Customers find what they need, then message you ready to
+              buy or book.
+            </p>
+          </div>
+        </section>
+
+        <section id="demo" class="site-section">
+          <h2>See what you get</h2>
+          <p class="lead">
+            Open the demo on your phone. This is the kind of site you receive, with real layout,
+            listings and contact buttons.
+          </p>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-5">
+            <div class="demo-card main">
+              <span class="text-sm text-mint">Hostel agent demo</span>
+              <h3 class="text-[1.05rem]">Sample hostel agent site</h3>
+              <p class="flex-1 text-[0.95rem] text-dim">
+                Hostel listings with photos, prices, YouTube video links, location and a WhatsApp
+                button. Built at the Basic level.
+              </p>
+              <a class="btn btn-default" href="hostel-demo/index.html">View live demo</a>
+              
+            </div>
+
+</div>
+        </section>
+
+        <section id="plans" class="site-section">
+          <h2>Choose a plan</h2>
+          <p class="lead">
+            Pay one setup fee to get your site built, then a small monthly fee to keep it online and
+            updated. Prices below are in naira. Swipe sideways to compare Basic, Standard and
+            Premium.
+          </p>
+  <p class="launch-note"><b>Just getting started.</b> These are launch prices and they will go up soon, so the earlier you join, the less you pay.</p>
+          <div>
+            <div class="mb-1 flex items-center justify-between gap-3">
+              <p class="m-0 text-sm text-dim" id="plan-status">Swipe sideways to compare plans</p>
+              <div class="flex gap-2" id="plan-nav">
+                <button type="button" class="plan-nav-btn" id="plan-prev" aria-label="Previous plan"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="m15 18-6-6 6-6"/></svg></button>
+                <button type="button" class="plan-nav-btn" id="plan-next" aria-label="Next plan"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5"><path d="m9 18 6-6-6-6"/></svg></button>
+              </div>
+            </div>
+            <div class="plan-track" id="plan-track" role="region" aria-roledescription="carousel" aria-label="Pricing plans" tabindex="0"><div class="plan-slide" data-plan="basic" role="group" aria-roledescription="slide" aria-label="Basic, 1 of 3"><article class="plan-card tone-mint"><span class="plan-badge mint">Launch price</span><h3 class="text-[1.15rem]">Basic</h3><div class="mt-3 text-[0.95rem] text-dim line-through">₦10,000</div><div class="price mt-0.5">₦8,000</div><div class="mb-4 text-[0.9rem] text-dim">setup, then ₦2,000 per month</div><ul><li>Homepage with intro, your listings and contact</li><li>YouTube video links for your listings</li><li>WhatsApp link preview card</li><li>Up to 10 listings</li><li>2 to 3 edits per month</li></ul><hr><p class="text-[0.9rem] text-dim">Ready in about 2 to 3 days</p><p class="mt-3 text-[0.88rem] text-mint">Save ₦2,000. Only for the first few clients, then the price goes back to ₦10,000.</p></article></div><div class="plan-slide" data-plan="standard" role="group" aria-roledescription="slide" aria-label="Standard, 2 of 3"><article class="plan-card tone-violet"><span class="plan-badge">Best value</span><h3 class="text-[1.15rem]">Standard</h3><div class="price">₦15,000</div><div class="mb-4 text-[0.9rem] text-dim">setup, then ₦3,500 per month</div><ul><li>Everything in Basic</li><li>Search and filter for your listings</li><li>A page for each listing</li><li>About section</li><li>Up to 20 listings</li><li>5 to 6 edits per month</li></ul><hr><p class="text-[0.9rem] text-dim">Ready in about 4 to 5 days</p><p class="mt-3 text-[0.88rem] text-mint">Launch price. Goes up soon.</p></article></div><div class="plan-slide" data-plan="premium" role="group" aria-roledescription="slide" aria-label="Premium, 3 of 3"><article class="plan-card tone-pink"><h3 class="text-[1.15rem]">Premium</h3><div class="price">₦28,000</div><div class="mb-4 text-[0.9rem] text-dim">setup, then ₦5,500 per month</div><ul><li>Everything in Standard</li><li>FAQ section</li><li>Customer reviews and testimonials</li><li>Priority updates, you go first in the queue</li><li>Up to 30 listings</li><li>10 edits per month</li><li>Free custom domain setup. You buy and own the domain name, I connect it to your site.</li></ul><hr><p class="text-[0.9rem] text-dim">Ready in about 6 to 7 days</p><p class="mt-3 text-[0.88rem] text-mint">Launch price. Goes up soon.</p><div class="gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><span><b>A gift from us</b>A free month of edits when you choose Premium</span></div></article></div></div>
+            <div class="plan-dots" id="plan-dots" role="tablist" aria-label="Choose a plan"><button type="button" class="plan-dot" role="tab" aria-label="Show Basic plan" data-i="0"><span></span></button><button type="button" class="plan-dot" role="tab" aria-label="Show Standard plan" data-i="1"><span></span></button><button type="button" class="plan-dot" role="tab" aria-label="Show Premium plan" data-i="2"><span></span></button></div>
+          </div>
+          <p class="note mt-6 max-w-3xl text-[0.9rem] text-dim">
+            <b class="text-text">What is a listing?</b> One item you show on your site: a hostel,
+            a menu item, a product or a service. <b class="text-text">Need it faster?</b> Add a
+            rush option to any plan for +50% of the setup fee. The build clock starts once I have
+            all your content (photos, videos, prices and contacts), not when you pay. You own your final site. It is hosted and managed on my account, and if you ever want it, I'll hand it over, free for now.
+    </p>
+    <p class="note mt-2 max-w-3xl text-[0.9rem] text-dim"><b class="text-text">Want your own domain name?</b> You buy and own it, and I set it up for you for ₦3,000.</p>
+    <p class="note mt-2 max-w-3xl text-[0.9rem] text-dim"><b class="text-text">Over your listing limit?</b> Each extra listing is a ₦500 setup fee.</p>
+        </section>
+
+        <section id="maintenance" class="site-section">
+          <h2>How maintenance works</h2>
+          <p class="lead">
+            Your monthly fee keeps your site running, bug-free and looked after. Here is how billing works.
+          </p>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-5">
+            <div class="rule">
+              <h3 class="mb-1.5 text-[0.98rem]">Monthly fee</h3>
+              <p class="text-[0.93rem] text-dim">
+                Paid at the start of each month. I keep your site online, check it for bugs and fix them, and reply to your messages within 24 hours. A backup copy is kept, and the edits in your plan are included.
+              </p>
+            </div>
+            <div class="rule">
+              <h3 class="mb-1.5 text-[0.98rem]">Extras</h3>
+              <p class="text-[0.93rem] text-dim">
+                Changes beyond your included edits are billed at month end from a running list, using a
+                price list we agree on first. Big jobs are paid half upfront.
+              </p>
+            </div>
+            <div class="rule">
+              <h3 class="mb-1.5 text-[0.98rem]">Weekly option</h3>
+              <p class="text-[0.93rem] text-dim">
+                If cash is tight, split the same monthly fee into weekly payments. The first week is
+                paid upfront.
+              </p>
+            </div>
+            <div class="rule">
+              <h3 class="mb-1.5 text-[0.98rem]">Edits and new listings</h3>
+              <p class="text-[0.93rem] text-dim">
+                A price change, new photo or edited description counts as one edit. Replacing an old listing with a new one also counts as one edit. Need more listings than your plan includes? Each extra listing is a ₦500 setup fee.
+              </p>
+            </div>
+      <div class="rule">
+        <h3 class="mb-1.5 text-[0.98rem]">Your site, managed for you</h3>
+        <p class="text-[0.93rem] text-dim">
+          Your website is hosted and managed on my account, so you can focus on your business. If you stop paying the monthly fee, I stop updates to your site, and it goes offline after 2 weeks. It comes back online as soon as you pay what you owe. You can ask me at any time to hand your website over to you, and for now, that handover is free.
+        </p>
+      </div>
+          </div>
+          <p class="note mt-6 max-w-3xl text-[0.95rem] text-dim">If you have any questions, feel free to contact me on <a href="https://wa.me/2347088278642?text=Hello%20Web-Vault%2C%20I%20have%20a%20question." target="_blank" rel="noopener" style="color:var(--color-mint);font-weight:700">WhatsApp</a>.</p>
+  </section>
+
+        <section id="how" class="site-section">
+          <h2>How it works</h2>
+          <ol class="steps">
+            <li>
+              <b>Send your content</b>
+              Photos, videos, prices and contacts, straight on WhatsApp.
+            </li>
+            <li>
+              <b>I build your site</b>
+              The delivery clock starts once I have everything.
+            </li>
+            <li>
+              <b>You review it</b>
+              Check it on your phone and ask for changes.
+            </li>
+            <li>
+              <b>It goes live</b>
+              Published and ready to share with your customers.
+            </li>
+          </ol>
+        </section>
+
+        <section id="reviews" class="site-section">
+          <h2>What clients say</h2>
+          <p class="lead">Real feedback from businesses we have built for.</p>
+          <div class="reviews-empty">
+            <b class="mb-1.5 block font-display text-base text-text">Reviews coming soon</b>
+            Feedback from our first clients will appear here.
+          </div>
+        </section>
+
+        <section id="contact" class="site-section">
+          <div class="contact-panel">
+            <h2>Ready to get your site?</h2>
+            <p class="lead mx-auto mb-6">
+              Send a message on WhatsApp and tell me about your business.
+            </p>
+            <a class="btn btn-default" href="https://wa.me/2347088278642?text=Hello%20Web-Vault%2C%20I%20want%20to%20know%20more%20about%20your%20plans." target="_blank" rel="noopener noreferrer">
+                Message on WhatsApp
+              </a>
+            
+          </div>
+        </section>
+      </div>
+      <footer class="px-4 pb-12 pt-8 text-center text-[0.85rem] text-dim">
+        © Web-Vault. Websites built, hosted and maintained for you.
+      </footer>
+
+<script>
+(function () {
+  var NAMES = ["Basic", "Standard", "Premium"];
+  var START = 1;
+  var track = document.getElementById("plan-track");
+  var statusEl = document.getElementById("plan-status");
+  var nav = document.getElementById("plan-nav");
+  var prev = document.getElementById("plan-prev");
+  var next = document.getElementById("plan-next");
+  var dots = document.getElementById("plan-dots");
+  var dotBtns = [].slice.call(dots.querySelectorAll(".plan-dot"));
+  var active = START, hint = true, swipeable = true;
+  var drag = { active: false, startX: 0, scrollLeft: 0 };
+
+  function nearest() {
+    var slides = [].slice.call(track.children);
+    var mid = track.scrollLeft + track.clientWidth / 2;
+    var best = 0, bestDist = Infinity;
+    slides.forEach(function (s, i) {
+      var d = Math.abs(s.offsetLeft + s.offsetWidth / 2 - mid);
+      if (d < bestDist) { bestDist = d; best = i; }
+    });
+    return best;
+  }
+  function scrollToIndex(i, behavior) {
+    var s = track.children[i];
+    if (!s) return;
+    track.scrollTo({ left: s.offsetLeft - (track.clientWidth - s.offsetWidth) / 2, behavior: behavior || "smooth" });
+  }
+  function measure() { swipeable = track.scrollWidth > track.clientWidth + 4; }
+  function render() {
+    statusEl.textContent = swipeable
+      ? (hint ? "Swipe sideways to compare plans" : NAMES[active] + " plan")
+      : "Basic, Standard and Premium";
+    nav.style.display = swipeable ? "" : "none";
+    dots.style.display = swipeable ? "" : "none";
+    prev.disabled = active === 0;
+    next.disabled = active === NAMES.length - 1;
+    dotBtns.forEach(function (b, i) {
+      if (i === active) b.setAttribute("aria-current", "true");
+      else b.removeAttribute("aria-current");
+    });
+  }
+  function go(i) {
+    var n = Math.max(0, Math.min(NAMES.length - 1, i));
+    hint = false; active = n; render(); scrollToIndex(n);
+  }
+  function onScroll() {
+    active = nearest(); measure();
+    if (track.scrollLeft > 8) hint = false;
+    render();
+  }
+
+  track.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  prev.addEventListener("click", function () { go(active - 1); });
+  next.addEventListener("click", function () { go(active + 1); });
+  dotBtns.forEach(function (b) {
+    b.addEventListener("click", function () { go(parseInt(b.getAttribute("data-i"), 10)); });
+  });
+  track.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") { e.preventDefault(); go(active + 1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(active - 1); }
+  });
+
+  track.addEventListener("pointerdown", function (e) {
+    if (e.pointerType !== "mouse") return;
+    drag = { active: true, startX: e.clientX, scrollLeft: track.scrollLeft };
+    track.setPointerCapture(e.pointerId);
+  });
+  track.addEventListener("pointermove", function (e) {
+    if (!drag.active) return;
+    e.preventDefault();
+    track.scrollLeft = drag.scrollLeft - (e.clientX - drag.startX);
+  });
+  function endDrag() {
+    if (!drag.active) return;
+    drag.active = false;
+    var i = nearest();
+    active = i; hint = false; render(); scrollToIndex(i);
+  }
+  track.addEventListener("pointerup", endDrag);
+  track.addEventListener("pointercancel", endDrag);
+
+  function init() {
+    measure();
+    if (swipeable) scrollToIndex(START, "auto");
+    render();
+  }
+  init();
+  window.addEventListener("load", function () {
+    if (!hint) return;
+    measure();
+    if (swipeable) scrollToIndex(START, "auto");
+    render();
+  });
+})();
+
+</script>
+<script>
+(function(){
+  var SKIP=function(p){return p.closest('.plan-card,footer,nav,.banner')||p.id==='plan-status'||p.classList.contains('start-pill')||p.classList.contains('hint');};
+  var items=[];
+  function collapse(it){
+    it.p.classList.remove('vm-open'); it.b.classList.remove('vm-inline');
+    it.p.parentNode.insertBefore(it.b,it.p.nextSibling);
+    it.b.textContent='View more'; it.b.setAttribute('aria-expanded','false');
+  }
+  function expand(it){
+    it.p.classList.add('vm-open'); it.p.appendChild(it.b); it.b.classList.add('vm-inline');
+    it.p.style.marginBottom=it.mb; it.b.style.marginBottom='0';
+    it.b.textContent='View less'; it.b.setAttribute('aria-expanded','true');
+  }
+  function setup(){
+    var ps=document.querySelectorAll('p');
+    for(var i=0;i<ps.length;i++){
+      var p=ps[i]; if(SKIP(p)||p.getAttribute('data-vm')) continue;
+      p.setAttribute('data-vm','1');
+      var b=document.createElement('button');
+      b.type='button'; b.className='vm-btn'; b.textContent='View more'; b.hidden=true; b.setAttribute('aria-expanded','false');
+      p.parentNode.insertBefore(b,p.nextSibling);
+      var it={p:p,b:b,mb:getComputedStyle(p).marginBottom};
+      (function(it){
+        it.b.addEventListener('click',function(){
+          if(it.p.classList.contains('vm-open')){collapse(it);measure();}else{expand(it);}
+        });
+      })(it);
+      items.push(it);
+    }
+  }
+  function measure(){
+    for(var i=0;i<items.length;i++){
+      var it=items[i];
+      if(it.p.classList.contains('vm-open')) continue;
+      it.p.style.marginBottom=it.mb;
+      it.p.classList.add('vm-clamp');
+      var over=it.p.scrollHeight>it.p.clientHeight+1;
+      it.b.hidden=!over;
+      if(over){it.p.style.marginBottom='0';it.b.style.marginBottom=it.mb;}else{it.b.style.marginBottom='0';}
+    }
+  }
+  var t;
+  setup(); measure();
+  window.addEventListener('load',measure);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(measure);}
+  window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(measure,150);});
+})();
+</script>
+</body>
+</html>
